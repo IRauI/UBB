@@ -1,0 +1,128 @@
+#navlist {
+  position: absolute;
+}
+
+#navlist li {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  display: block;
+  height: 84px;
+  width: 84px;
+}
+
+#facebook {
+  left: 0px;
+  right: 84px;
+  background: url('poza.png') 0px 84px;
+}
+
+#flicker {
+  left: 84px;
+  right: 168px;
+  background: url('poza.png') -84px 84px;
+}
+#basketball {
+  left: 168px;
+  right: 252px;
+  background: url('poza.png') -168px 84px;
+}
+#gmail {
+  left: 252px;
+  right: 336px;
+  background: url('poza.png') -252px 84px;
+}
+#linkdin {
+  left: 336px;
+  right: 420px;
+  background: url('poza.png') -336px 84px;
+}
+#pinterest {
+  left: 420px;
+  right: 504px;
+  background: url('poza.png') -420px 84px;
+}
+#wi-fi {
+  left: 504px;
+  right: 588px;
+  background: url('poza.png') -504px 84px;
+}
+#skype {
+  left: 588px;
+  right: 672px;
+  background: url('poza.png') -588px 84px;
+}
+#twitter {
+  left: 672px;
+  right: 756px;
+  background: url('poza.png') -672px 84px;
+}
+#vine {
+  left: 756px;
+  right: 840px;
+  background: url('poza.png') -756px 84px;
+}
+#youtube {
+  left: 840px;
+  right: 924px;
+  background: url('poza.png') -840px 84px;
+}
+
+#facebook:hover {
+  left: 0px;
+  right: 84px;
+  background: url('poza.png') 0px 0px;
+}
+
+
+#flicker:hover {
+  left: 84px;
+  right: 168px;
+  background: url('poza.png') -84px 0px;
+}
+#basketball:hover {
+  left: 168px;
+  right: 252px;
+  background: url('poza.png') -168px 0px;
+}
+#gmail:hover {
+  left: 252px;
+  right: 336px;
+  background: url('poza.png') -252px 0px;
+}
+#linkdin:hover {
+  left: 336px;
+  right: 420px;
+  background: url('poza.png') -336px 0px;
+}
+#pinterest:hover {
+  left: 420px;
+  right: 504px;
+  background: url('poza.png') -420px 0px;
+}
+#wi-fi:hover {
+  left: 504px;
+  right: 588px;
+  background: url('poza.png') -504px 0px;
+}
+#skype:hover {
+  left: 588px;
+  right: 672px;
+  background: url('poza.png') -588px 0px;
+}
+#twitter:hover {
+  left: 672px;
+  right: 756px;
+  background: url('poza.png') -672px 0px;
+}
+#vine:hover {
+  left: 756px;
+  right: 840px;
+  background: url('poza.png') -756px 0px;
+}
+#youtube:hover {
+  left: 840px;
+  right: 924px;
+  background: url('poza.png') -840px 0px;
+}
