@@ -1,0 +1,16 @@
+table{
+    border: 1px solid;
+    background-color:  #07553B;
+}
+
+th {
+    width: 100px;
+    height: 100px;
+}
+.contentbtn {
+    width: 100px;
+    height: 100px;
+    color:transparent;
+}
+
+

@@ -1,0 +1,10 @@
+td, th {
+    background-color: wheat;
+    text-align: center;
+    width: 100px;
+    height: 50px;
+}
+
+table {
+    background-color: burlywood;
+}
