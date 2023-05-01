@@ -3,7 +3,6 @@ var value = 1;
 var matrix;
 var x;
 var y;
-var z;
 
 function createMatrix(table){
     rows = table.getElementsByTagName('tr');
