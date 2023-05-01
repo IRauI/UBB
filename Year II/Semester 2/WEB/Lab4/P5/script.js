@@ -3,6 +3,7 @@ var value = 1;
 var matrix;
 var x;
 var y;
+var z;
 
 function createMatrix(table){
     rows = table.getElementsByTagName('tr');
@@ -16,6 +17,8 @@ function createMatrix(table){
     });
     return matrix;
 }
+
+
 
 document.addEventListener('keydown', (e) => {
     e = e || window.event;
