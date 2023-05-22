@@ -28,6 +28,8 @@ public:
 	Activity fnd(const string& title) const;
 
 	const vector<Activity>& getAll() const noexcept;
+
+	void setAll(const vector<Activity>& a);
 };
 
 class ActivityRepoException {

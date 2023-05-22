@@ -15,7 +15,6 @@ int main()
     testValidator();
     testCtr();
     run();
-
     _CrtDumpMemoryLeaks();
 }
 

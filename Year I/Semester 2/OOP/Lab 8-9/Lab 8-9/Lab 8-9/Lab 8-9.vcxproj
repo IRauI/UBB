@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -78,6 +78,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -112,10 +113,11 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
+      <WarningLevel>Level4</WarningLevel>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <TreatWarningAsError>true</TreatWarningAsError>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -139,19 +141,34 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ActionUndo.cpp" />
     <ClCompile Include="Activity.cpp" />
+    <ClCompile Include="ActivityList.cpp" />
     <ClCompile Include="ActivityRepo.cpp" />
     <ClCompile Include="ActivityStore.cpp" />
+    <ClCompile Include="AddUndo.cpp" />
+    <ClCompile Include="DeleteUndo.cpp" />
     <ClCompile Include="Lab 8-9.cpp" />
+    <ClCompile Include="ModifyUndo.cpp" />
     <ClCompile Include="UI.cpp" />
+    <ClCompile Include="Utils.cpp" />
     <ClCompile Include="Validator.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ActionUndo.h" />
     <ClInclude Include="Activity.h" />
+    <ClInclude Include="ActivityList.h" />
     <ClInclude Include="ActivityRepo.h" />
     <ClInclude Include="ActivityStore.h" />
+    <ClInclude Include="AddUndo.h" />
+    <ClInclude Include="DeleteUndo.h" />
+    <ClInclude Include="ModifyUndo.h" />
     <ClInclude Include="UI.h" />
+    <ClInclude Include="Utils.h" />
     <ClInclude Include="Validator.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="date.csv" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

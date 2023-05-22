@@ -1,6 +1,7 @@
 #include "ActivityRepo.h"
 #include <sstream>
 #include <assert.h>
+#include <algorithm>
 
 using std::ostream;
 using std::stringstream;
@@ -11,8 +12,7 @@ bool ActivityRepo::exists(const Activity& a) const {
 		return true;
 	}
 	catch (ActivityRepoException&) {
-		return false;
-	}
+		return false;}
 }
 
 void ActivityRepo::store(const Activity& a) {
@@ -24,13 +24,17 @@ void ActivityRepo::store(const Activity& a) {
 void ActivityRepo::rmv(const Activity& a) {
 	if (!exists(a))
 		throw ActivityRepoException("Activitatea nu exista!");
+	/*
 	for (vector<Activity>::iterator it = activities.begin(); it < activities.end(); it++)
 		if (*it == a) {
 			activities.erase(it);
 			break;
 		}
+	*/
+	activities.erase(find(activities.begin(), activities.end(), a));
 	
 }
+
 
 void ActivityRepo::modify(const Activity& a, const string& newDescription, const string& newType, const int& newDuration) {
 	if (!exists(a))
@@ -53,6 +57,10 @@ Activity ActivityRepo::fnd(const string& title) const {
 
 const vector<Activity>& ActivityRepo::getAll() const noexcept {
 	return activities;
+}
+
+void ActivityRepo::setAll(const vector<Activity>& a) {
+	activities = a;
 }
 
 void testAdauga() {

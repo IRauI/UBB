@@ -9,9 +9,10 @@ void run() {
 	int option = 0;
 	ActivityRepo rep;
 	ActivityValidator val;
-	ActivityStore ctr(rep, val);
+	ActivityList list;
+	ActivityStore ctr(rep, val,list);
 	do {
-		cout << "1.Adaugare activitate\n2.Stergere activitate\n3.Modificare activitate\n4.Afisare activitati\n5.Filtrare Activitati\n6.Sortare Activitati\n0.Exit\n";
+		cout << "1.Adaugare activitate\n2.Stergere activitate\n3.Modificare activitate\n4.Afisare Activitati\n5.Filtrare Activitati\n6.Sortare Activitati\n7.Stergeti Lista\n8.Salvati Lista\n9.Undo\n10.Generati Lista\n11.Adaugati in Lista\n12.Afisati Lista\n0.Exit\n";
 		cin >> option;
 		if (option == 1) {
 			string title;
@@ -151,6 +152,60 @@ void run() {
 					cout << activity << '\n';
 				}
 			}
+		}
+		if (option == 7) {
+			ctr.emptyList();
+			cout << "Lista a fost golita \n";
+		}
+		if (option == 8) {
+			string file;
+			cout << "Fisierul in care doriti sa salvati:\n";
+			cin >> file;
+			ctr.saveList(file);
+		}
+		if (option == 9) {
+			cout << "1.Adaugare\n2.Modificare\n3.Stergere\n";
+			int aux;
+			cin >> aux;
+			if (aux == 1) {
+				ctr.undoAdd();
+			}
+			if (aux == 2) {
+				ctr.undoModify();
+			}
+			if (aux == 3) {
+				ctr.undoDelete();
+			}
+			for (auto activity : ctr.getAll2()) {
+				cout << activity << '\n';
+			}
+		}
+		if (option == 10) {
+			cout << "Numarul de elemente:\n";
+			int n = 0;
+			cin >> n;
+			ctr.generateList(n);
+			for (auto activity : ctr.getList()) {
+				cout << activity << '\n';
+			}
+		}
+
+		if (option == 11) {
+			for (auto activity : ctr.getAll2()) {
+				cout << activity << '\n';
+			}
+			cout << "Titlu:\n";
+			string title;
+			cin >> title;
+			ctr.addToList2(title);
+		}
+		if (option == 12) {
+			for (auto activity : ctr.getList()) {
+				cout << activity << '\n';
+			}
+		}
+		if (option == 13) {
+			ctr.undo();
 		}
 	} while (option != 0);
 }

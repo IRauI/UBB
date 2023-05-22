@@ -1,0 +1,106 @@
+function validateName(name)
+{
+	if (name.length == 0)
+		return 'Numele nu a fost completat!';
+	for (let c of name)
+		if (c >= '0' && c <= '9')
+			return 'Numele este nevalid!';
+	return 'Ok';
+}
+
+function validateDate(date)
+{
+	var today = new Date();
+	var d = new Date(date.toString());
+	if (!date)
+		return 'Data nasterii nu a fost completata!';
+	if (today < d)
+		return 'Data nasterii este nevalida!';
+	return 'Ok';
+}
+
+function validateAge(age)
+{
+	if (age.length == 0)
+		return 'Varsta nu a fost completata!';
+	for (let c of age)
+		if (c < '0' || c > '9')
+			return 'Varsta este nevalida!';
+	return 'Ok';
+}
+
+function validateEmail(email)
+{
+	if (email.length == 0)
+		return 'Email-ul nu a fost completat!';
+	var found = 1;
+	for (let c of email)
+		if (c == '@')
+			found = 0;
+	if (found == 1)
+		return 'Email-ul este nevalid!';
+	return 'Ok';
+}
+
+function setMessage(labelID, inputID, message, color)
+{
+	$('#' + labelID).html(message);
+	$('#' + inputID).css('border-color', color);
+}
+
+function validate()
+{
+	var name = $('#nume').val();
+	var date = $('#dataNasterii').val();
+	var age = $('#varsta').val();
+	var email = $('#email').val();
+	
+	var error = 0;
+	
+	var messageName = validateName(name);
+	if (messageName != 'Ok')
+	{
+		error = 1;
+		setMessage('errorName', 'nume', messageName, 'red');
+	}
+	else
+	{
+		setMessage('errorName', 'nume', '', 'green');
+	}
+	
+	var messageDate = validateDate(date);
+	if (messageDate != 'Ok')
+	{
+		error = 1;
+		setMessage('errorDate', 'dataNasterii', messageDate, 'red');
+	}
+	else
+	{
+		setMessage('errorDate', 'dataNasterii', '', 'green');
+	}
+	
+	var messageAge = validateAge(age);
+	if (messageAge != 'Ok')
+	{
+		error = 1;
+		setMessage('errorAge', 'varsta', messageAge, 'red');
+	}
+	else
+	{
+		setMessage('errorAge', 'varsta', '', 'green');
+	}
+	
+	var messageEmail = validateEmail(email);
+	if (messageEmail != 'Ok')
+	{
+		error = 1;
+		setMessage('errorEmail', 'email', messageEmail, 'red');
+	}
+	else
+	{
+		setMessage('errorEmail', 'email', '', 'green');
+	}
+	
+	if (error == 0)
+		$('#success').text('Campurile sunt completate corect!');
+}

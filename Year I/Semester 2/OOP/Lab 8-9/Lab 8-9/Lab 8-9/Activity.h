@@ -11,7 +11,7 @@ private:
 	std::string title;
 	std::string description;
 	std::string type;
-	int duration;
+	int duration = 0;
 public:
 	Activity() = default;
 

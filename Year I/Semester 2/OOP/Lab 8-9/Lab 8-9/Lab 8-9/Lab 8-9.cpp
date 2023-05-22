@@ -8,12 +8,18 @@
 #include "UI.h"
 #include <stdlib.h>
 #include <crtdbg.h>
+#include "AddUndo.h"
+#include "ModifyUndo.h"
+#include "DeleteUndo.h"
 
 int main()
 {
     testeRepo();
     testValidator();
     testCtr();
+    testAddUndo();
+    testModifyUndo();
+    testDeleteUndo();
     run();
 
     _CrtDumpMemoryLeaks();

@@ -127,6 +127,6 @@ def plotNetwork(network, communities):
     nx.draw_networkx_edges(G, pos, alpha=0.3)
     plt.show()
 
-path='Lab3/data/real-networks/real/krebs/krebs.gml'
+path='Lab3/data/real-networks/real/karate/karate.gml'
 comms=ga_algorithm(path,200)
 plotNetwork(path,comms[1])

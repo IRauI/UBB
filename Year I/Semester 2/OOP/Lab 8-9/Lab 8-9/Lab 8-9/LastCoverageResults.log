@@ -1,0 +1,21 @@
+[2023-05-09 13:27:10] [info] Start Program:
+Path:"C:\Users\Devtel\UBB\Year I\Semester 2\OOP\Lab 8-9\Lab 8-9\x64\Debug\Lab 8-9.exe"
+Arguments:
+Working directory: "C:\Users\Devtel\UBB\Year I\Semester 2\OOP\Lab 8-9\Lab 8-9\Lab 8-9\"
+Modules: Selected: C:\Users\Devtel\UBB\Year I\Semester 2\OOP\Lab 8-9\Lab 8-9\x64\Debug\Lab 8-9.exe Excluded: 
+Sources: Selected: C:\Users\Devtel\UBB\Year I\Semester 2\OOP\Lab 8-9\Lab 8-9\Lab 8-9 Excluded: UI.cpp UI.h 
+Log Level: Normal
+Cover Children: 0
+Aggregate by file: 1
+Continue after C++ exception: 0
+Optimized build support: 0
+Export: Binary C:\Users\Devtel\AppData\Local\Temp\4qnqn3gu.gjh 
+Input coverage: 
+Unified diff: 
+Excluded line regular expressions: 
+Substitute pdb source paths: 
+
+[2023-05-09 13:27:11] [info] Module: C:\Users\Devtel\UBB\Year I\Semester 2\OOP\Lab 8-9\Lab 8-9\x64\Debug\Lab 8-9.exe is selected because it matches selected pattern: C:\Users\Devtel\UBB\Year I\Semester 2\OOP\Lab 8-9\Lab 8-9\x64\Debug\Lab 8-9.exe
+[2023-05-09 13:27:11] [info] ----------------------------------------------------
+[2023-05-09 13:27:11] [info] Coverage binary generated in file: C:\Users\Devtel\AppData\Local\Temp\4qnqn3gu.gjh
+[2023-05-09 13:27:11] [info] ----------------------------------------------------
